@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_SURCHARGE_DECORATOR</CLSNAME>
+    <CLSNAME>ZCL_TAX_DECORATOR</CLSNAME>
     <LANGU>E</LANGU>
     <DESCRIPT>Concreate  Surcharge Decorator</DESCRIPT>
     <STATE>1</STATE>

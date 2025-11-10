@@ -1,4 +1,4 @@
-CLASS zcl_surcharge_decorator DEFINITION INHERITING FROM zcl_price_decorator
+CLASS zcl_tax_decorator DEFINITION INHERITING FROM zcl_price_decorator
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -11,9 +11,9 @@ CLASS zcl_surcharge_decorator DEFINITION INHERITING FROM zcl_price_decorator
 ENDCLASS.
 
 
-CLASS zcl_surcharge_decorator IMPLEMENTATION.
+CLASS zcl_tax_decorator IMPLEMENTATION.
   METHOD zif_price_calculator~get_price.
     rv_price = mo_component->get_price( iv_material ).
-    rv_price = rv_price +  15. " Add fixed surcharge
+    rv_price = rv_price * '1.2' . " Add fixed surcharge
   ENDMETHOD.
 ENDCLASS.

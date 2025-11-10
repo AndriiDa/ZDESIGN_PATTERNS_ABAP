@@ -16,7 +16,7 @@ CLASS zcl_base_price_launch IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
     DATA(lo_base) = NEW zcl_base_price_calculator( ).
     DATA(lo_discounted) = NEW zcl_discount_decorator( lo_base ).
-    DATA(lo_final_price) = NEW zcl_surcharge_decorator( lo_discounted ).
+    DATA(lo_final_price) = NEW zcl_tax_decorator( lo_discounted ).
 
     DATA(lv_price) = lo_final_price->zif_price_calculator~get_price( iv_material = 'MAT123' ).
 
