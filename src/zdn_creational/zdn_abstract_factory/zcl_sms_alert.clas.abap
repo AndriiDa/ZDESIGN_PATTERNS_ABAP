@@ -11,10 +11,10 @@ CLASS zcl_sms_alert DEFINITION
 ENDCLASS.
 
 
-
 CLASS zcl_sms_alert IMPLEMENTATION.
-
-
   METHOD zif_notification_sms~send_sms.
+  ENDMETHOD.
+
+  METHOD zif_notification_sms~display.
   ENDMETHOD.
 ENDCLASS.

@@ -2,7 +2,7 @@ INTERFACE zif_notification_sms
   PUBLIC.
 
 
-TYPES: BEGIN OF ty_sms_data,
+  TYPES: BEGIN OF ty_sms_data,
            phone_number TYPE string,
            message      TYPE string,
            status       TYPE string,
@@ -12,12 +12,13 @@ TYPES: BEGIN OF ty_sms_data,
     IMPORTING
       iv_phone_number  TYPE string
       iv_message       TYPE string
+      iv_status       TYPE string DEFAULT 'SEND'
     RETURNING
       VALUE(rv_status) TYPE string,
 
     display
-    RETURNING
-      VALUE(result) TYPE ty_sms_data.
+      RETURNING
+        VALUE(result) TYPE ty_sms_data.
 
 
 ENDINTERFACE.

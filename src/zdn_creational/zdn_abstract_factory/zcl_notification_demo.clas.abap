@@ -26,6 +26,8 @@ CLASS zcl_notification_demo IMPLEMENTATION.
     lo_sms->send_sms( iv_message = 'message' iv_phone_number = 'phone number' ).
 
     out->write( lo_email->display(  ) ).
+     out->write( '==========' ).
+    out->write( lo_sms->display(  ) ).
 
   ENDMETHOD.
 ENDCLASS.
