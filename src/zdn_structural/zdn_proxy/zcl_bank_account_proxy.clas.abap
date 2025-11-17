@@ -19,12 +19,16 @@ CLASS zcl_bank_account_proxy DEFINITION PUBLIC CREATE PUBLIC.
       RETURNING VALUE(rv_authorized) TYPE abap_bool.
 ENDCLASS.
 
-CLASS zcl_bank_account_proxy IMPLEMENTATION.
+
+
+CLASS ZCL_BANK_ACCOUNT_PROXY IMPLEMENTATION.
+
 
   METHOD constructor.
     me->account = account.
     me->user    = user.
   ENDMETHOD.
+
 
   METHOD zif_bank_account~withdraw.
     IF is_authorized( iv_action = 'WITHDRAW' ).
@@ -35,10 +39,10 @@ CLASS zcl_bank_account_proxy IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD is_authorized.
     " Demo purpose: simple check (replace with AUTHORITY-CHECK in real case)
 *    rv_authorized = xsdbool( user = 'ADMIN' ).  " Only ADMIN allowed
     rv_authorized = xsdbool( user = sy-uname ).  " Only ADMIN allowed
   ENDMETHOD.
-
 ENDCLASS.

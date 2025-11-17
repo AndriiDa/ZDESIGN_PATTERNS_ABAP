@@ -18,11 +18,15 @@ CLASS zcl_material DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_material IMPLEMENTATION.
+
+CLASS ZCL_MATERIAL IMPLEMENTATION.
+
+
   METHOD zif_bom_component~display.
     result = |{ repeat( val = '-'
                         occ = indent ) }    { display_material( ) }|.
   ENDMETHOD.
+
 
   METHOD constructor.
     " Constructor implementation
@@ -30,13 +34,13 @@ CLASS zcl_material IMPLEMENTATION.
     me->qty  = qty.
   ENDMETHOD.
 
-  METHOD display_material.
-    result = |Material: { me->name }, Quantity: { me->qty }|.
-  ENDMETHOD.
-
 
   METHOD zif_bom_component~get_name.
     result = me->name.
   ENDMETHOD.
 
+
+  METHOD display_material.
+    result = |Material: { me->name }, Quantity: { me->qty }|.
+  ENDMETHOD.
 ENDCLASS.

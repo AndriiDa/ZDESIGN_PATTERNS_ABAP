@@ -25,8 +25,8 @@ ENDCLASS.
 
 
 
+CLASS ZCL_PRICE_CALCULATOR IMPLEMENTATION.
 
-CLASS zcl_price_calculator IMPLEMENTATION.
 
   METHOD calculate_price.
     clear steps.
@@ -36,6 +36,4 @@ CLASS zcl_price_calculator IMPLEMENTATION.
     APPEND finalize_price( )    TO steps.
     result = steps.
   ENDMETHOD.
-
-
 ENDCLASS.

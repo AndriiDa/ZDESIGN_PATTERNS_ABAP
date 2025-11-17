@@ -19,7 +19,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_so_facade IMPLEMENTATION.
+CLASS ZCL_SO_FACADE IMPLEMENTATION.
+
+
   METHOD process_order.
 
 
@@ -43,5 +45,4 @@ CLASS zcl_so_facade IMPLEMENTATION.
     rv_result = |Order processed successfully. Total Price: { lv_price }|.
 
   ENDMETHOD.
-
 ENDCLASS.

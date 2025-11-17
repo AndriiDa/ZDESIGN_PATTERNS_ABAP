@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_so_launch IMPLEMENTATION.
+CLASS ZCL_SO_LAUNCH IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

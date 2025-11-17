@@ -10,7 +10,10 @@ CLASS zcl_ext_bridge_demo DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_ext_bridge_demo IMPLEMENTATION.
+
+CLASS ZCL_EXT_BRIDGE_DEMO IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA lo_renderer TYPE REF TO zif_renderer.
     DATA lo_report   TYPE REF TO zcl_report_abs.

@@ -13,10 +13,14 @@ CLASS zcl_inventory_report DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_inventory_report IMPLEMENTATION.
+
+CLASS ZCL_INVENTORY_REPORT IMPLEMENTATION.
+
+
   METHOD generate.
     result = mo_renderer->render( |Sales Inventory generated on { sy-datum }| ).
   ENDMETHOD.
+
 
   METHOD constructor.
     super->constructor( io_renderer = io_renderer ).

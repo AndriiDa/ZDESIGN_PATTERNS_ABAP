@@ -13,7 +13,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_price_calculator_launcher IMPLEMENTATION.
+CLASS ZCL_PRICE_CALCULATOR_LAUNCHER IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

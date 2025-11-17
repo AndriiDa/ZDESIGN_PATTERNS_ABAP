@@ -16,7 +16,10 @@ CLASS zcl_price_decorator DEFINITION ABSTRACT
 ENDCLASS.
 
 
-CLASS zcl_price_decorator IMPLEMENTATION.
+
+CLASS ZCL_PRICE_DECORATOR IMPLEMENTATION.
+
+
   METHOD constructor.
     mo_component = io_component.
   ENDMETHOD.

@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_notification_demo IMPLEMENTATION.
+CLASS ZCL_NOTIFICATION_DEMO IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -31,6 +31,3 @@ CLASS zcl_notification_demo IMPLEMENTATION.
 
   ENDMETHOD.
 ENDCLASS.
-
-
-

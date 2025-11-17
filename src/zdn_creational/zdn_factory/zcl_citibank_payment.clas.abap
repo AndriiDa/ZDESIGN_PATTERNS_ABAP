@@ -12,12 +12,13 @@ ENDCLASS.
 
 
 
-CLASS zcl_citibank_payment IMPLEMENTATION.
+CLASS ZCL_CITIBANK_PAYMENT IMPLEMENTATION.
 
 
   METHOD zif_bank_payme~execute_payment.
     rv_result = |Payment of { iv_amount } to CITIBANK account { iv_account } processed|.
   ENDMETHOD.
+
 
   METHOD zif_bank_payme~is_account_active.
     rv_result = abap_true.

@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_excel_renderer IMPLEMENTATION.
+CLASS ZCL_EXCEL_RENDERER IMPLEMENTATION.
 
 
   METHOD zif_renderer~render.

@@ -11,7 +11,10 @@ CLASS zcl_composite_launch DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_composite_launch IMPLEMENTATION.
+
+CLASS ZCL_COMPOSITE_LAUNCH IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA(lo_root) = NEW zcl_assembly( name = 'Car' ).
 

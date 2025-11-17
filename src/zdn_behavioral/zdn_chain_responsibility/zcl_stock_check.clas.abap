@@ -13,7 +13,10 @@ CLASS zcl_stock_check DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_stock_check IMPLEMENTATION.
+
+CLASS ZCL_STOCK_CHECK IMPLEMENTATION.
+
+
   METHOD zif_handler~handle.
     IF i_request = 'STOCK'.
       rule_name = 'Stock check passed.'.

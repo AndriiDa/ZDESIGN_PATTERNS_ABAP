@@ -33,10 +33,9 @@ PROTECTED SECTION.
 ENDCLASS.
 
 
-CLASS zcl_sales_order IMPLEMENTATION.
-  METHOD create.
-    ro_order = NEW zcl_sales_order( ).
-  ENDMETHOD.
+
+CLASS ZCL_SALES_ORDER IMPLEMENTATION.
+
 
   METHOD get_order_info.
     rv_order_info = VALUE ty_order_info(
@@ -49,29 +48,37 @@ CLASS zcl_sales_order IMPLEMENTATION.
   ENDMETHOD.
 
 
-  METHOD set_order_type.
-    order_type = iv_value.
-  ENDMETHOD.
-
-  METHOD set_sales_org.
-    sales_org = iv_value.
-  ENDMETHOD.
-
   METHOD set_customer.
     customer = iv_value.
   ENDMETHOD.
+
 
   METHOD set_payment_terms.
     payment_terms = iv_value.
   ENDMETHOD.
 
-  METHOD set_incoterms.
-    incoterms = iv_value.
-  ENDMETHOD.
 
   METHOD set_delivery_block.
     delivery_block = iv_value.
   ENDMETHOD.
 
 
+  METHOD set_sales_org.
+    sales_org = iv_value.
+  ENDMETHOD.
+
+
+  METHOD set_order_type.
+    order_type = iv_value.
+  ENDMETHOD.
+
+
+  METHOD set_incoterms.
+    incoterms = iv_value.
+  ENDMETHOD.
+
+
+  METHOD create.
+    ro_order = NEW zcl_sales_order( ).
+  ENDMETHOD.
 ENDCLASS.

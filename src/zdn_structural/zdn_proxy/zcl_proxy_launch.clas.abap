@@ -11,7 +11,10 @@ CLASS zcl_proxy_launch DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_proxy_launch IMPLEMENTATION.
+
+CLASS ZCL_PROXY_LAUNCH IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     " Create real subject
     DATA(lo_real_account) = NEW zcl_bank_account( initial_balance = '1000.00' ).

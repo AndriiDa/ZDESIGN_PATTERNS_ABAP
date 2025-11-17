@@ -21,7 +21,10 @@ CLASS zcl_legacy_payment DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_legacy_payment IMPLEMENTATION.
+
+CLASS ZCL_LEGACY_PAYMENT IMPLEMENTATION.
+
+
   METHOD make_payment.
     " Simulate payment logic
     mv_last_amount = iv_total.
@@ -30,6 +33,7 @@ CLASS zcl_legacy_payment IMPLEMENTATION.
     " Here you could call external services, BAPIs, etc.
     rv_success = abap_true.
   ENDMETHOD.
+
 
   METHOD display_payment.
     rv_output = |Last payment: { mv_last_amount } { mv_last_currency }|.

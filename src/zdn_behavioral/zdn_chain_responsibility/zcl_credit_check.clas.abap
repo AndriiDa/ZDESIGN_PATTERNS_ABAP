@@ -12,7 +12,10 @@ CLASS zcl_credit_check DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_credit_check IMPLEMENTATION.
+
+CLASS ZCL_CREDIT_CHECK IMPLEMENTATION.
+
+
   METHOD zif_handler~handle.
     IF i_request = 'CREDIT'.
       rule_name = 'Credit check passed.'.

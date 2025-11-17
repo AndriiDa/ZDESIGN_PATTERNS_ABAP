@@ -11,7 +11,10 @@ CLASS zcl_customer_launch DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_customer_launch IMPLEMENTATION.
+
+CLASS ZCL_CUSTOMER_LAUNCH IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     DATA(customer1_id) = NEW zcl_dao_customer_src1( ).

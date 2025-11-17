@@ -12,9 +12,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_alv_renderer IMPLEMENTATION.
+CLASS ZCL_ALV_RENDERER IMPLEMENTATION.
+
+
   METHOD zif_renderer~render.
     result = |'Rendering ALV Grid:', { iv_content }|.
   ENDMETHOD.
-
 ENDCLASS.

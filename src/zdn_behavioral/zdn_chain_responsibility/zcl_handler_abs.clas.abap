@@ -14,7 +14,10 @@ CLASS zcl_handler_abs DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_handler_abs IMPLEMENTATION.
+
+CLASS ZCL_HANDLER_ABS IMPLEMENTATION.
+
+
   METHOD zif_handler~handle.
     " Default: pass to next if exists
     IF next_handler IS BOUND.
@@ -25,9 +28,11 @@ CLASS zcl_handler_abs IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD zif_handler~set_next.
     next_handler = i_next.
   ENDMETHOD.
+
 
   METHOD get_rule_name.
     result = rule_name.

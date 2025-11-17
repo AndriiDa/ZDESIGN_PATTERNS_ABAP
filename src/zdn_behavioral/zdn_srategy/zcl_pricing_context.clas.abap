@@ -17,13 +17,15 @@ ENDCLASS.
 
 
 
-CLASS zcl_pricing_context IMPLEMENTATION.
+CLASS ZCL_PRICING_CONTEXT IMPLEMENTATION.
+
+
   METHOD constructor.
     mo_strategy = io_price.
   ENDMETHOD.
 
+
   METHOD get_price.
     rv_price = mo_strategy->calculate_price( iv_base_price ).
   ENDMETHOD.
-
 ENDCLASS.

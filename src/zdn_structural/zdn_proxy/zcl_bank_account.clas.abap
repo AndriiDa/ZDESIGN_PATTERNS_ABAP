@@ -13,7 +13,10 @@ CLASS zcl_bank_account DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_bank_account IMPLEMENTATION.
+
+CLASS ZCL_BANK_ACCOUNT IMPLEMENTATION.
+
+
   METHOD zif_bank_account~withdraw.
     IF amount <= balance.
       balance -= amount.
@@ -22,6 +25,7 @@ CLASS zcl_bank_account IMPLEMENTATION.
       success = abap_false.
     ENDIF.
   ENDMETHOD.
+
 
   METHOD constructor.
     balance = initial_balance.

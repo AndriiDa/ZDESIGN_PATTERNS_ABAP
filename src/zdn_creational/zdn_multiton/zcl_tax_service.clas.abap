@@ -43,11 +43,14 @@ ENDCLASS.
 
 
 
-CLASS zcl_tax_service IMPLEMENTATION.
+CLASS ZCL_TAX_SERVICE IMPLEMENTATION.
+
+
   METHOD constructor.
     mv_bukrs = iv_bukrs.
     load_config( ).
   ENDMETHOD.
+
 
   METHOD zif_tax_service~calculate_tax .
 
@@ -70,6 +73,7 @@ CLASS zcl_tax_service IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD get_instance.
     DATA: ls_instance TYPE ty_instance,
           lo_instance TYPE REF TO zcl_tax_service.
@@ -88,6 +92,7 @@ CLASS zcl_tax_service IMPLEMENTATION.
 
     ro_instance = lo_instance.
   ENDMETHOD.
+
 
   METHOD refresh.
 
@@ -137,5 +142,4 @@ CLASS zcl_tax_service IMPLEMENTATION.
 
 
   ENDMETHOD.
-
 ENDCLASS.

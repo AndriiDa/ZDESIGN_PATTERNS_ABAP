@@ -26,7 +26,8 @@ CLASS zcx_tax_error DEFINITION
 ENDCLASS.
 
 
-CLASS zcx_tax_error IMPLEMENTATION.
+
+CLASS ZCX_TAX_ERROR IMPLEMENTATION.
 
 
   METHOD constructor ##ADT_SUPPRESS_GENERATION.
@@ -37,6 +38,4 @@ CLASS zcx_tax_error IMPLEMENTATION.
                       THEN 'Unknown tax error'
                       ELSE iv_message ).
   ENDMETHOD.
-
-
 ENDCLASS.

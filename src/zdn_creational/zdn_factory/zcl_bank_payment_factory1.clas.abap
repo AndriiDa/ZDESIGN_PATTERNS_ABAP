@@ -32,7 +32,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_bank_payment_factory1 IMPLEMENTATION.
+CLASS ZCL_BANK_PAYMENT_FACTORY1 IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -51,11 +51,13 @@ CLASS zcl_bank_payment_factory1 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD register_bank.
     INSERT VALUE #( bank_name = iv_bank_name
                     class_name = iv_class ) INTO TABLE gt_registry. "ASSIGNING FIELD-SYMBOL(<fs>).
 
   ENDMETHOD.
+
 
   METHOD create_payment_handler.
 
@@ -73,6 +75,4 @@ CLASS zcl_bank_payment_factory1 IMPLEMENTATION.
                     ELSE  NEW zcl_hsbc_payment( ) ).
 
   ENDMETHOD.
-
-
 ENDCLASS.

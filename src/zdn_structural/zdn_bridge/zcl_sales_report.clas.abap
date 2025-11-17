@@ -12,10 +12,14 @@ CLASS zcl_sales_report DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_sales_report IMPLEMENTATION.
+
+CLASS ZCL_SALES_REPORT IMPLEMENTATION.
+
+
   METHOD generate.
     result = mo_renderer->render( |Sales Report generated on { sy-datum }| ).
   ENDMETHOD.
+
 
   METHOD constructor.
     super->constructor( io_renderer = io_renderer ).

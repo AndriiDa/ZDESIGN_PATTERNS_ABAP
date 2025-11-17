@@ -11,7 +11,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_base_price_launch IMPLEMENTATION.
+CLASS ZCL_BASE_PRICE_LAUNCH IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
     DATA(lo_base) = NEW zcl_base_price_calculator( ).
@@ -22,6 +23,4 @@ CLASS zcl_base_price_launch IMPLEMENTATION.
 
     out->write( |Final price for material MAT123: { lv_price }| ).
   ENDMETHOD.
-
-
 ENDCLASS.

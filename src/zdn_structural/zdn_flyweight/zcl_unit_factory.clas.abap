@@ -23,7 +23,10 @@ CLASS zcl_unit_factory DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_unit_factory IMPLEMENTATION.
+
+CLASS ZCL_UNIT_FACTORY IMPLEMENTATION.
+
+
   METHOD get_unit.
     IF line_exists( mt_flyweight_cache[ unit = iv_unit ] ).
       DATA(ls_cache_entry) = mt_flyweight_cache[ unit = iv_unit ].
@@ -39,6 +42,7 @@ CLASS zcl_unit_factory IMPLEMENTATION.
 
     ENDIF.
   ENDMETHOD.
+
 
   METHOD display_cache.
     rt_flyweight_cache = mt_flyweight_cache.

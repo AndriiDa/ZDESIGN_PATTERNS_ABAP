@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_promo_pricing IMPLEMENTATION.
+CLASS ZCL_PROMO_PRICING IMPLEMENTATION.
 
 
   METHOD zif_pricing_strategy~calculate_price.

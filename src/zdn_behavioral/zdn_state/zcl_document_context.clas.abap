@@ -14,18 +14,20 @@ ENDCLASS.
 
 
 
-CLASS zcl_document_context IMPLEMENTATION.
+CLASS ZCL_DOCUMENT_CONTEXT IMPLEMENTATION.
+
+
   METHOD constructor.
     mo_state = NEW zcl_state_draft(  ).
   ENDMETHOD.
 
-  METHOD process_mode.
-   result = mo_state->process( me ).
-  ENDMETHOD.
 
   METHOD set_state.
     mo_state = io_state.
   ENDMETHOD.
 
 
+  METHOD process_mode.
+   result = mo_state->process( me ).
+  ENDMETHOD.
 ENDCLASS.

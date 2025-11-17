@@ -11,7 +11,10 @@ CLASS zcl_chain_responsibility_demo DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_chain_responsibility_demo IMPLEMENTATION.
+
+CLASS ZCL_CHAIN_RESPONSIBILITY_DEMO IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     " Create handlers
     DATA(lo_credit)   = NEW zcl_credit_check( ).

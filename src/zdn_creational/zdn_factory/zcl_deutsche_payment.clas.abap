@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_deutsche_payment IMPLEMENTATION.
+CLASS ZCL_DEUTSCHE_PAYMENT IMPLEMENTATION.
 
 
   METHOD zif_bank_payme~execute_payment.

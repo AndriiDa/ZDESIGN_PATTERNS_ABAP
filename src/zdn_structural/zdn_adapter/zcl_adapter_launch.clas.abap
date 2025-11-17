@@ -10,7 +10,10 @@ CLASS zcl_adapter_launch DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_adapter_launch IMPLEMENTATION.
+
+CLASS ZCL_ADAPTER_LAUNCH IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA(lo_legacy) = NEW zcl_legacy_payment( ).
     DATA(lo_adapter) = NEW zcl_payment_adapter( io_legacy = lo_legacy ).

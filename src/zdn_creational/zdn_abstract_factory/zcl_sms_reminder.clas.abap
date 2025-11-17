@@ -13,8 +13,12 @@ ENDCLASS.
 
 
 
-CLASS zcl_sms_reminder IMPLEMENTATION.
+CLASS ZCL_SMS_REMINDER IMPLEMENTATION.
 
+
+  METHOD zif_notification_sms~display.
+    result  = sms_data.
+  ENDMETHOD.
 
 
   METHOD zif_notification_sms~send_sms.
@@ -22,9 +26,4 @@ CLASS zcl_sms_reminder IMPLEMENTATION.
     sms_data-phone_number = iv_phone_number .
     sms_data-status = iv_status.
   ENDMETHOD.
-
-  METHOD zif_notification_sms~display.
-    result  = sms_data.
-  ENDMETHOD.
-
 ENDCLASS.

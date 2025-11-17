@@ -11,7 +11,10 @@ CLASS zdn_document_launch DEFINITION
 ENDCLASS.
 
 
-CLASS zdn_document_launch IMPLEMENTATION.
+
+CLASS ZDN_DOCUMENT_LAUNCH IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     FINAL(lo_doc1) = NEW zcl_document( i_title   = 'Report'
                                       i_content = 'Prototype Pattern Example' ).

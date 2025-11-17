@@ -13,10 +13,14 @@ CLASS zcl_purchase_report DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_purchase_report IMPLEMENTATION.
+
+CLASS ZCL_PURCHASE_REPORT IMPLEMENTATION.
+
+
   METHOD generate.
     result = mo_renderer->render( |Sales Purchase generated on { sy-datum }| ).
   ENDMETHOD.
+
 
   METHOD constructor.
     super->constructor( io_renderer = io_renderer ).

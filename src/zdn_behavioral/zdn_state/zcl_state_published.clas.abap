@@ -12,7 +12,10 @@ CLASS zcl_state_published DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_state_published IMPLEMENTATION.
+
+CLASS ZCL_STATE_PUBLISHED IMPLEMENTATION.
+
+
   METHOD process.
     io_document->set_state( NEW zcl_state_archived( ) ).
     result = | 'Document is already Published. No further processing.' |.

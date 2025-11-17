@@ -37,7 +37,9 @@ CLASS zcl_customer_manager DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_customer_manager IMPLEMENTATION.
+
+CLASS ZCL_CUSTOMER_MANAGER IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
     DATA(lo_manager) = NEW zcl_customer_manager( iv_flight_id = '00000012' ).
@@ -55,6 +57,7 @@ CLASS zcl_customer_manager IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD constructor.
     flight_id = iv_flight_id.
     CLEAR: flight, books.
@@ -63,33 +66,6 @@ CLASS zcl_customer_manager IMPLEMENTATION.
     log_message( |Constructor called with Flight ID: { iv_flight_id }| ).
   ENDMETHOD.
 
-  METHOD get_flight_data.
-    IF flight_loaded = abap_false.
-      load_flights( ).
-    ENDIF.
-    RETURN flight.
-  ENDMETHOD.
-
-  METHOD get_book_data.
-    IF books_loaded = abap_false.
-      load_books( ).
-    ENDIF.
-    RETURN books.
-  ENDMETHOD.
-
-  METHOD load_flights.
-    SELECT SINGLE *
-      FROM zrap110_atrav001
-      WHERE travel_id = @flight_id
-      INTO @flight.
-
-    IF sy-subrc = 0.
-      flight_loaded = abap_true.
-      log_message( |Flight data loaded for ID: { flight_id }| ).
-    ELSE.
-      log_message( |No flight found for ID: { flight_id }| ).
-    ENDIF.
-  ENDMETHOD.
 
   METHOD load_books.
     SELECT *
@@ -106,6 +82,14 @@ CLASS zcl_customer_manager IMPLEMENTATION.
   ENDMETHOD.
 
 
+  METHOD get_flight_data.
+    IF flight_loaded = abap_false.
+      load_flights( ).
+    ENDIF.
+    RETURN flight.
+  ENDMETHOD.
+
+
   METHOD log_message.
     DATA ls_log TYPE ty_log.
     GET TIME STAMP FIELD ls_log-timestamp.
@@ -115,5 +99,25 @@ CLASS zcl_customer_manager IMPLEMENTATION.
   ENDMETHOD.
 
 
-ENDCLASS.
+  METHOD get_book_data.
+    IF books_loaded = abap_false.
+      load_books( ).
+    ENDIF.
+    RETURN books.
+  ENDMETHOD.
 
+
+  METHOD load_flights.
+    SELECT SINGLE *
+      FROM zrap110_atrav001
+      WHERE travel_id = @flight_id
+      INTO @flight.
+
+    IF sy-subrc = 0.
+      flight_loaded = abap_true.
+      log_message( |Flight data loaded for ID: { flight_id }| ).
+    ELSE.
+      log_message( |No flight found for ID: { flight_id }| ).
+    ENDIF.
+  ENDMETHOD.
+ENDCLASS.

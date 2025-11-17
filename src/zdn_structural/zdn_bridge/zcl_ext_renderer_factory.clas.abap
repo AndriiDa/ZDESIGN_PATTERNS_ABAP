@@ -9,7 +9,10 @@ CLASS zcl_ext_renderer_factory DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_ext_renderer_factory IMPLEMENTATION.
+
+CLASS ZCL_EXT_RENDERER_FACTORY IMPLEMENTATION.
+
+
   METHOD factory_create_renderer.
     TRY.
         CASE iv_format.

@@ -12,8 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_pricing_context_launch IMPLEMENTATION.
-
+CLASS ZCL_PRICING_CONTEXT_LAUNCH IMPLEMENTATION.
 
 
 METHOD if_oo_adt_classrun~main.
@@ -36,5 +35,4 @@ METHOD if_oo_adt_classrun~main.
   ENDLOOP.
 
 ENDMETHOD.
-
 ENDCLASS.

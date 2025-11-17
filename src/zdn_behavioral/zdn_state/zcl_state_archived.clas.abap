@@ -12,7 +12,10 @@ CLASS zcl_state_archived DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_state_archived IMPLEMENTATION.
+
+CLASS ZCL_STATE_ARCHIVED IMPLEMENTATION.
+
+
   METHOD process.
     result = |Document is archived. No further actions allowed.'|.
   ENDMETHOD.

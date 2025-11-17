@@ -16,12 +16,16 @@ CLASS zcl_payment_adapter DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_payment_adapter IMPLEMENTATION.
+
+CLASS ZCL_PAYMENT_ADAPTER IMPLEMENTATION.
+
+
   METHOD zif_payment_processor~process_payment.
     " Adapt interface
     mo_legacy->make_payment( iv_total = iv_amount
                              iv_curr  = iv_currency ).
   ENDMETHOD.
+
 
   METHOD constructor.
     mo_legacy = io_legacy.

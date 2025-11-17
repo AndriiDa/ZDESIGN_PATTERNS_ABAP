@@ -7,7 +7,10 @@ CLASS zdn_property_container_demo DEFINITION
 ENDCLASS.
 
 
-CLASS zdn_property_container_demo IMPLEMENTATION.
+
+CLASS ZDN_PROPERTY_CONTAINER_DEMO IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA(lo_container) = NEW zcl_property_container( ).
 

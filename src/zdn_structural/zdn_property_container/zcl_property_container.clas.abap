@@ -22,20 +22,26 @@ CLASS zcl_property_container DEFINITION PUBLIC CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_property_container IMPLEMENTATION.
+
+CLASS ZCL_PROPERTY_CONTAINER IMPLEMENTATION.
+
+
   METHOD add_property.
     DELETE mt_properties WHERE key = iv_key.
     INSERT VALUE #( key   = iv_key
                     value = iv_value ) INTO TABLE mt_properties.
   ENDMETHOD.
 
+
   METHOD get_property.
        rv_value = VALUE #( mt_properties[ key = iv_key ]-value OPTIONAL ).
   ENDMETHOD.
 
+
   METHOD has_property.
     rv_exists = xsdbool( line_exists( mt_properties[ key = iv_key ] ) ).
   ENDMETHOD.
+
 
   METHOD get_all_properties.
     rt_properties = mt_properties.

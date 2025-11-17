@@ -11,7 +11,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_tax_service_launch IMPLEMENTATION.
+CLASS ZCL_TAX_SERVICE_LAUNCH IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -38,7 +38,4 @@ CLASS zcl_tax_service_launch IMPLEMENTATION.
 
     lo_out->write( |=== End of Demo ===| ).
   ENDMETHOD.
-
-
-
 ENDCLASS.

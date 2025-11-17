@@ -14,15 +14,19 @@ CLASS zcl_email_alert DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_email_alert IMPLEMENTATION.
+
+CLASS ZCL_EMAIL_ALERT IMPLEMENTATION.
+
+
+  METHOD zif_notification_email~display.
+    result = email_data.
+  ENDMETHOD.
+
+
   METHOD zif_notification_email~send_email.
     email_data-body = iv_body.
     email_data-recipient = iv_recipient.
     email_data-subject = iv_subject.
     rv_status = 'Success'.
-  ENDMETHOD.
-
-  METHOD zif_notification_email~display.
-    result = email_data.
   ENDMETHOD.
 ENDCLASS.

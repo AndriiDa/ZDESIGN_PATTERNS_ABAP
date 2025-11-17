@@ -21,7 +21,11 @@ CLASS zcl_sales_order_builder DEFINITION PUBLIC CREATE PUBLIC.
     DATA order TYPE REF TO zcl_sales_order.
 ENDCLASS.
 
-CLASS zcl_sales_order_builder IMPLEMENTATION.
+
+
+CLASS ZCL_SALES_ORDER_BUILDER IMPLEMENTATION.
+
+
   METHOD constructor.
     order = zcl_sales_order=>create(  ). "Factory method handles CREATE PRIVATE
   ENDMETHOD.
@@ -32,33 +36,38 @@ METHOD set_order_type.
     builder = me.
   ENDMETHOD.
 
+
   METHOD set_sales_org.
     order->set_sales_org( iv_value ).
     builder = me.
   ENDMETHOD.
+
 
   METHOD set_customer.
     order->set_customer( iv_value ).
     builder = me.
   ENDMETHOD.
 
+
   METHOD set_payment_terms.
     order->set_payment_terms( iv_value ).
     builder = me.
   ENDMETHOD.
+
 
   METHOD set_incoterms.
     order->set_incoterms( iv_value ).
     builder = me.
   ENDMETHOD.
 
+
   METHOD set_delivery_block.
     order->set_delivery_block( iv_value ).
     builder = me.
   ENDMETHOD.
 
+
   METHOD build.
     ro_order = order.
   ENDMETHOD.
-
 ENDCLASS.

@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_standard_pricing IMPLEMENTATION.
+CLASS ZCL_STANDARD_PRICING IMPLEMENTATION.
 
 
   METHOD zif_pricing_strategy~calculate_price.

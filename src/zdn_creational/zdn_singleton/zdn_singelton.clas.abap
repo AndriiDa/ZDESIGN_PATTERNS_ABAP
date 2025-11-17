@@ -17,13 +17,15 @@ ENDCLASS.
 
 
 
-CLASS zdn_singelton IMPLEMENTATION.
+CLASS ZDN_SINGELTON IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
     DATA(text) = zdn_singelton=>get_instance(  )->do_something(  ).
 
     out->write( name = 'Congrats' data = |Hello { sy-uname } { text } | ).
   ENDMETHOD.
+
 
   METHOD get_instance.
     ro_instance = go_instance.
@@ -33,8 +35,8 @@ CLASS zdn_singelton IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD do_something.
     result = 'do something great!'.
   ENDMETHOD.
-
 ENDCLASS.

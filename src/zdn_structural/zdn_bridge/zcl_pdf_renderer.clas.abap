@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_pdf_renderer IMPLEMENTATION.
+CLASS ZCL_PDF_RENDERER IMPLEMENTATION.
 
 
   METHOD zif_renderer~render.

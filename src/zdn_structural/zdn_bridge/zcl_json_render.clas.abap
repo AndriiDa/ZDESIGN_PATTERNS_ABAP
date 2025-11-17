@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_json_render IMPLEMENTATION.
+CLASS ZCL_JSON_RENDER IMPLEMENTATION.
 
 
   METHOD zif_renderer~render.

@@ -26,11 +26,10 @@ ENDCLASS.
 
 
 
-CLASS zcl_so_validator IMPLEMENTATION.
+CLASS ZCL_SO_VALIDATOR IMPLEMENTATION.
+
 
   METHOD validate.
     result = xsdbool( is_order-customer_id IS NOT INITIAL AND is_order-items IS NOT INITIAL ).
   ENDMETHOD.
-
-
 ENDCLASS.

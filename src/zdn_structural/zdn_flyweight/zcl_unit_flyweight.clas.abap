@@ -17,16 +17,21 @@ CLASS zcl_unit_flyweight DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_unit_flyweight IMPLEMENTATION.
-  METHOD zif_unit_flyweight~get_unit.
-    rv_unit = mv_unit.
+
+CLASS ZCL_UNIT_FLYWEIGHT IMPLEMENTATION.
+
+
+  METHOD get_instance.
+    ro_flyweight = NEW #( iv_unit = iv_unit ).
   ENDMETHOD.
+
 
   METHOD constructor.
     mv_unit = iv_unit.
   ENDMETHOD.
 
-  METHOD get_instance.
-    ro_flyweight = NEW #( iv_unit = iv_unit ).
+
+  METHOD zif_unit_flyweight~get_unit.
+    rv_unit = mv_unit.
   ENDMETHOD.
 ENDCLASS.

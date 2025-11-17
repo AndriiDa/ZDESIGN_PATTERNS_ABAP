@@ -13,7 +13,10 @@ CLASS zcl_report_abs DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_report_abs IMPLEMENTATION.
+
+CLASS ZCL_REPORT_ABS IMPLEMENTATION.
+
+
   METHOD constructor.
     mo_renderer = io_renderer.
   ENDMETHOD.

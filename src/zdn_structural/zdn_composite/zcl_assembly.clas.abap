@@ -19,7 +19,10 @@ CLASS zcl_assembly DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_assembly IMPLEMENTATION.
+
+CLASS ZCL_ASSEMBLY IMPLEMENTATION.
+
+
   METHOD zif_bom_component~display.
     result = |{ repeat( val = '-'
                         occ = indent ) }Assembly: { name }|.
@@ -30,15 +33,18 @@ CLASS zcl_assembly IMPLEMENTATION.
     ENDLOOP.
   ENDMETHOD.
 
+
   METHOD constructor.
     me->name = name.
   ENDMETHOD.
+
 
   METHOD add.
     INSERT VALUE #( name = component->get_name( )
                     ref  = component  ) INTO TABLE components.
     ro_self = me.
   ENDMETHOD.
+
 
   METHOD zif_bom_component~get_name.
     result = me->name.

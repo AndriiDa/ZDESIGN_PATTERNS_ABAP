@@ -13,7 +13,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_dao_customer_src1 IMPLEMENTATION.
+CLASS ZCL_DAO_CUSTOMER_SRC1 IMPLEMENTATION.
+
+
   METHOD zif_dao_customer~get_customer_by_id.
     " Implementation logic to retrieve customer by ID, mock data for demonstration
     data(mock_customers) = mock_data( ).
@@ -21,6 +23,7 @@ CLASS zcl_dao_customer_src1 IMPLEMENTATION.
     rv_customer = VALUE #( mock_customers[ kunnr = iv_kunnr ] OPTIONAL ).
 
   ENDMETHOD.
+
 
   METHOD mock_data.
 
@@ -31,5 +34,4 @@ rt_customers = VALUE #(
     ).
 
   ENDMETHOD.
-
 ENDCLASS.

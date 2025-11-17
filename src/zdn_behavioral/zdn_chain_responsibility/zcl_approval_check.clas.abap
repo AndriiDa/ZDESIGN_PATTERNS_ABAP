@@ -12,7 +12,10 @@ CLASS zcl_approval_check DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_approval_check IMPLEMENTATION.
+
+CLASS ZCL_APPROVAL_CHECK IMPLEMENTATION.
+
+
   METHOD zif_handler~handle.
     IF i_request = 'APPROVAL'.
       rule_name = |Approval check passed.|.

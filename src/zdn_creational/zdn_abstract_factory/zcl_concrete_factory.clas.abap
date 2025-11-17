@@ -10,7 +10,10 @@ CLASS zcl_concrete_factory DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_concrete_factory IMPLEMENTATION.
+
+CLASS ZCL_CONCRETE_FACTORY IMPLEMENTATION.
+
+
   METHOD zif_notification_factory~get_email.
     CASE iv_factoty_type.
       WHEN 'ALERT'.
@@ -19,6 +22,7 @@ CLASS zcl_concrete_factory IMPLEMENTATION.
         ro_notif =     NEW zcl_email_reminder( ).
     ENDCASE.
   ENDMETHOD.
+
 
   METHOD zif_notification_factory~get_sms.
     CASE iv_factoty_type.

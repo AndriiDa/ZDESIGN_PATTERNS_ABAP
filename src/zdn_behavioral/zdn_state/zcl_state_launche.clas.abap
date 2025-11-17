@@ -11,7 +11,10 @@ CLASS zcl_state_launche DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_state_launche IMPLEMENTATION.
+
+CLASS ZCL_STATE_LAUNCHE IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA(lo_document) = NEW zcl_document_context( ).
 

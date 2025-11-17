@@ -13,7 +13,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_so_pricing IMPLEMENTATION.
+CLASS ZCL_SO_PRICING IMPLEMENTATION.
+
+
   METHOD calculate_price.
 
     DATA(lv_total) = CONV decfloat16( 0 ).
@@ -33,5 +35,4 @@ CLASS zcl_so_pricing IMPLEMENTATION.
     rv_price = lv_total.
 
   ENDMETHOD.
-
 ENDCLASS.

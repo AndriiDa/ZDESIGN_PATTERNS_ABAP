@@ -25,29 +25,34 @@ CLASS zcl_document DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_document IMPLEMENTATION.
+
+CLASS ZCL_DOCUMENT IMPLEMENTATION.
+
+
   METHOD zif_cloneable_templ~clone.
     ro_clone = NEW zcl_document( i_title   = mv_title
                                  i_content = mv_content ).
   ENDMETHOD.
+
 
   METHOD constructor.
     mv_title   = i_title.
     mv_content = i_content.
   ENDMETHOD.
 
+
   METHOD display.
     rs_doc-title   = mv_title.
     rs_doc-content = mv_content.
   ENDMETHOD.
 
+
   METHOD get_title.
     rv_title = mv_title.
   ENDMETHOD.
+
 
   METHOD get_content.
     rv_content = mv_content.
   ENDMETHOD.
 ENDCLASS.
-
-

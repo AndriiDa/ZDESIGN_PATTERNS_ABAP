@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_sales_order_launch IMPLEMENTATION.
+CLASS ZCL_SALES_ORDER_LAUNCH IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -33,5 +33,4 @@ CLASS zcl_sales_order_launch IMPLEMENTATION.
     out->write( |Sales Org:  { ls_info-sales_org }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

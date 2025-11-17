@@ -11,10 +11,14 @@ CLASS zcl_email_reminder DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_email_reminder IMPLEMENTATION.
-  METHOD zif_notification_email~send_email.
-  ENDMETHOD.
+
+CLASS ZCL_EMAIL_REMINDER IMPLEMENTATION.
+
 
   METHOD zif_notification_email~display.
+  ENDMETHOD.
+
+
+  METHOD zif_notification_email~send_email.
   ENDMETHOD.
 ENDCLASS.
